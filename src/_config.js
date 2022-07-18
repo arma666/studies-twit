@@ -1,9 +1,5 @@
-export const process = {
-  dev: true,
-};
-
 export const app = {
-  title: "Tamplate",
+  title: "Twit",
 };
 
 export const links = [
