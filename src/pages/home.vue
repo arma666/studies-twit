@@ -1,7 +1,8 @@
 <template lang="html">
-  <p>hello vew</p>
   <div class="card_wrapper" v-for="item in items" :key="item.id">
-    <Card :name="item.lvl + ' lvl'" :title="item.title" />
+    <Card :name="item.lvl + ' lvl'" :title="item.title">
+      {{ item.descr }}
+    </Card>
   </div>
 </template>
 
