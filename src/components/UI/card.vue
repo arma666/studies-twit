@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="card">
-    <div class="card-header">
-      <slot name="header"></slot>
+    <div v-if="imgUrl" class="card-img__wrapper">
+      <img class="card-img" :src="imgUrl" :alt="title" />
     </div>
     <span class="card-name">{{ name }}</span>
     <span class="card-title">{{ title }}</span>
@@ -21,6 +21,9 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    imgUrl: {
+      type: String,
     },
   },
 };
