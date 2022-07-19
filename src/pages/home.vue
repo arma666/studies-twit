@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import items from "@/seeders/items.js";
 import Card from "@/components/UI/card";
 export default {
   components: {
@@ -14,22 +15,7 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          id: 1,
-          title: "Archer",
-          img: require("/assets/img/archer.png"),
-          descr: "archer archer archer archer",
-          lvl: 4,
-        },
-        {
-          id: 2,
-          title: "Wizard",
-          img: require("/assets/img/wizard.png"),
-          descr: "Wizard Wizard Wizard Wizard",
-          lvl: 5,
-        },
-      ],
+      items: items,
     };
   },
 };
