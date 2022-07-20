@@ -9,6 +9,7 @@ const routerHistory = createWebHistory();
 import HomePage from "@/pages/home";
 import AboutPage from "@/pages/about";
 import P404 from "@/pages/404";
+import Item from "@/pages/_itemAlias";
 
 const routers = createRouter({
   history: routerHistory,
@@ -22,6 +23,11 @@ const routers = createRouter({
       path: "/about",
       name: "about",
       component: AboutPage,
+    },
+    {
+      path: "/:itemAlias",
+      name: "itemAlias",
+      component: Item,
     },
     {
       path: "/:CatchAll(.*)",

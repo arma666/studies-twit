@@ -7,6 +7,9 @@
     <span class="card-title">{{ title }}</span>
     <div class="card-body">
       <slot></slot>
+      <div class="">
+        <router-link v-if="link" :to="link">go</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -23,6 +26,9 @@ export default {
       required: true,
     },
     imgUrl: {
+      type: String,
+    },
+    link: {
       type: String,
     },
   },
